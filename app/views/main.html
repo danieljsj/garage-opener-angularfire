@@ -1,0 +1,10 @@
+<div ng-hide-auth="" class="jumbotron">
+  <h1>Garage Opener</h1>
+  <p class="lead">
+    1. <a href="#/login">Log in</a>. 2. Press Button.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/login">LOG IN<span class="glyphicon glyphicon-arrow-right"></span></a></p>
+</div>
+<div ng-show-auth="" class="jumbotron">
+  <p><button class="btn btn-lg btn-success" ng-click="triggerDoor()">Open/Close Garage Door <span class="glyphicon glyphicon-arrow-up"></span> / <span class="glyphicon glyphicon-arrow-down"></span></button></p>
+</div>
