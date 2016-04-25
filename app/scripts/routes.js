@@ -74,6 +74,10 @@ angular.module('garageOpenerApp')
         templateUrl: 'views/account.html',
         controller: 'AccountCtrl'
       })
+      .when('/admin', {
+        templateUrl: 'views/admin.html',
+        controller: 'AdminCtrl'
+      })
       .otherwise({redirectTo: '/'});
   }])
 

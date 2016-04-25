@@ -44,7 +44,11 @@ angular.module('garageOpenerApp')
       }
 
       function createProfile(user) {
-        var ref = Ref.child('users', user.uid), def = $q.defer();
+
+        // NOTE: THERE IS A COOLER AND MORE SECURE WAY TO CREATE LOCKED-IN EMAIL ADDRESS HERE: 
+        // http://stackoverflow.com/questions/25294478/how-do-you-prevent-duplicate-user-properties-in-firebase
+        
+        var ref = Ref.child('users/'+user.uid), def = $q.defer(); // THIS WAS 'users',uid -- threw error in that expected 1 arg! in generator
         ref.set({email: email, name: firstPartOfEmail(email)}, function(err) {
           $timeout(function() {
             if( err ) {

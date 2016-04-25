@@ -1,0 +1,28 @@
+
+<h2>Admins</h2>
+
+<form>
+  <input placeholder="AdminEmail..." ng-model="newAdminEmail">
+  <button type="submit" ng-click="addAdminEmail(newAdminEmail); newAdminEmail = null;">add</button>
+</form>
+
+<ul id="adminEmails" ng-show="adminEmails.length">
+  <li ng-repeat="adminEmail in adminEmails | reverse">
+  	{{adminEmail.$value}}
+  </li>
+</ul>
+
+<h2>Members</h2>
+
+<form>
+  <input placeholder="MemberEmail..." ng-model="newMemberEmail">
+  <button type="submit" ng-click="addMemberEmail(newMemberEmail); newMemberEmail = null;">add</button>
+</form>
+
+<ul id="memberEmails" ng-show="memberEmails.length">
+  <li ng-repeat="memberEmail in memberEmails | reverse">
+  	{{memberEmail.$value}}
+  </li>
+</ul>
+
+<p class="alert alert-danger" ng-show="err">{{err}}</p>

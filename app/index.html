@@ -42,10 +42,12 @@
               <!-- //angularfire -->
               <!-- <li><a ng-href="#/chat">chat</a></li> -->
               <li>
-              <a ng-hide-auth="" href="#/login">log in</a>
-              <a ng-show-auth="" href="#/account">account</a>
-            </li>
-
+                <a ng-hide-auth="" href="#/login">log in</a>
+                <a ng-show-auth="" href="#/account">account</a>
+              </li>
+              <li ng-show-auth="">
+                <a href="#/admin">admin</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -105,6 +107,7 @@
         <script src="scripts/directives/ngShowAuth.js"></script>
         <script src="scripts/directives/ngHideAuth.js"></script>
         <script src="scripts/routes.js"></script>
+        <script src="scripts/controllers/admin.js"></script>
         <!-- endbuild -->
 </body>
 </html>
